@@ -41,6 +41,7 @@ class ItemsApiTest < ApiTest
       "name"        => "Item Deserunt Dicta",
       "description" => "Rem quos non dolores sit. Est facilis error ab adipisci consequuntur quo et. Vel error eos.",
       "unit_price"  => "274.09",
+      #this 
       "merchant_id" => 59,
       "created_at"  => "2012-03-27T14:54:05.000Z",
       "updated_at"  => "2012-03-27T14:54:05.000Z"
@@ -73,7 +74,7 @@ class ItemsApiTest < ApiTest
 
   def test_it_can_find_first_instance_by_unit_price
     item = load_data("/api/v1/items/find?unit_price=#{item_find['unit_price']}")
-
+binding.pry
     item_find.each do |attribute|
       assert_equal item_find[attribute], item[attribute]
     end
@@ -112,6 +113,7 @@ class ItemsApiTest < ApiTest
       "name"        => "Item Et Placeat",
       "description" => "Autem repudiandae qui nobis. Optio est rerum quam voluptas quos commodi repellendus. Vitae doloribus dignissimos.",
       "unit_price"  => "491.21",
+      #this
       "merchant_id" => 41,
       "created_at"  => "2012-03-27T14:54:03.000Z",
       "updated_at"  => "2012-03-27T14:54:03.000Z"
